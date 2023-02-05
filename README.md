@@ -19,3 +19,11 @@ In this case, you need to enable, when you click on the extension with the right
 ## Run tests
 1. To run unit tests, go to the '__test__' folder and run 'npm test'.
 2. To run e2e tests, you need to go to the 'Frontend' folder and run the 'npx cypress open' command and run the 'coin-app.spec.js' script, after moving the 'coin-app.spec.js' file to the folder 'cypress' - 'integration'.
+
+# Application example
+
+![first](https://user-images.githubusercontent.com/91899278/216834204-962ec965-964a-45a4-9919-a0e190b7d45c.gif)
+![second](https://user-images.githubusercontent.com/91899278/216834243-bfd7fd63-bda0-4b90-9b70-c590f03bafd7.gif)
+![third](https://user-images.githubusercontent.com/91899278/216834254-f3166aff-4e55-4d35-a875-60626c916f04.gif)
+![last](https://user-images.githubusercontent.com/91899278/216834255-b41bea9b-0f4e-4a42-b3ca-8ed78bf313e4.gif)
+
