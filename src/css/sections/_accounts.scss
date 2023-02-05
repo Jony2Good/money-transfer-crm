@@ -1,0 +1,366 @@
+.js-btn-account {
+  padding: 16px 24px;
+  background-color: var(--white);
+  color: var(--primary-main);
+}
+.card-body__layout {
+  padding: 22px;
+}
+.card {
+  height: 100%;
+}
+.check-img {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/image/check.svg");
+    background-size: 24px 24px;
+  }
+}
+
+.accounts-layout {
+  padding-right: 0 !important;
+}
+
+.transfer-account {
+  position: relative;
+  max-width: 606px;
+  max-height: 288px;
+  padding: 26px 50px;
+  border-radius: 50px;
+}
+
+.balance-field {
+  max-height: 288px;
+  border-radius: 50px;
+  padding: 20px 50px;
+  cursor: pointer;
+}
+.chart-field {
+  max-height: 200px;
+}
+
+.accounts-balance {
+  margin-right: 10px;
+}
+
+.table-history {
+  padding: 25px 50px;
+  border-radius: 50px;
+}
+.enable-cursor {
+  cursor: pointer;
+}
+
+.table-radius-left {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.table-radius-right {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.table > :not(caption) > * > * {
+  padding: 20px 50px;
+}
+
+.account-input {
+  position: relative;
+  min-width: 300px;
+  min-height: 44px;
+  padding: 10px 16px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 7px;
+  background-color: var(--white);
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  z-index: 1;
+}
+.error-account {
+  position: relative;
+}
+.error-account--layout {
+  top: 20px;
+  left: 20px;
+}
+
+.account-list--layout {
+  max-width: 300px;
+}
+
+.success-field--layout {
+  position: absolute;
+  top: 13%;
+  right: 12%;
+}
+
+.success-field--account {
+  top: 80%;
+  left: 8%;
+}
+
+.autocomplete-items {
+  position: absolute;
+  max-height: 178px;
+  background-color: $white;
+  border-radius: 7px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  & input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  & input[type="text"] {
+    background-color: #f1f1f1;
+    width: 100%;
+  }
+}
+
+.autocomplete-items div {
+  padding: 11px 16px;
+  cursor: pointer;
+}
+
+.autocomplete-items div:hover {
+  background-color: var(--primary-light);
+}
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background: url("../assets/image/check.svg") no-repeat;
+  color: #ffffff;
+}
+
+.charts-layout {
+  padding: 26px 98px;
+  border-radius: 50px;
+}
+
+.skeleton {
+  opacity: .7;
+  animation: skeleton-loading 500ms linear infinite alternate;
+
+  &-text,
+  &-btn,
+  &-block {
+    border-radius: 10px;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(45deg, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(45deg, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 150% 150%;
+  }
+
+  &-text {
+    width: 148px;
+    height: 22px;
+    margin-bottom: .25rem;
+  }
+
+  &-text:last-child {
+    width: 50px;
+    height: 1.25rem;
+  }
+
+  &-card {
+    width: 400px;
+    height: 156px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin-left: 24px;
+
+  }
+  &-card:not(:nth-child(3n+3)) {
+    margin-right: 24px;
+  }
+
+  &-block {
+    margin-top: 50px;
+  }
+
+  &-form,
+  &-chart,
+  &-chart--size,
+  &-table,
+  &-card {
+    background: #4b5563;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(-45deg, #4b5563, #d3cce3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-45deg, #4b5563, #a7a3b1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 150% 150%;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  &-btn {
+    width: 100px;
+    height: 50px;
+    float: right;
+  }
+
+  &-form, &-chart, &-chart--size, &-table {
+    border-radius: 50px;
+  }
+
+  &-form {
+     padding: 25px 50px;
+
+
+    & .skeleton-text {
+      width: 100%;
+      height: 44px;
+      margin-bottom: 1.25rem;
+    }
+
+    & .skeleton-block {
+      width: 168px;
+      height: 55px;
+      margin: 30px auto 0;
+    }
+  }
+
+  &-chart, &-chart--size {
+    padding: 25px 50px;
+
+
+    & .skeleton-text {
+      width: 100px;
+      height: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    & .skeleton-block {
+       height: 167px;
+    }
+  }
+
+  &-chart--size {
+    width: 100%;
+    height: 288px;
+
+    &:first-child {
+      grid-area: chart;
+    }
+    &:nth-child(2) {
+      grid-area: ratio;
+    }
+
+    & .skeleton-text {
+      width: 200px;
+    }
+
+    & .skeleton-block {
+      width: 90%;
+    }
+  }
+
+  &-table {
+    width: 100%;
+    height: 288px;
+    padding: 25px 50px;
+
+     & .skeleton-text {
+      width: 200px;
+      height: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    & .skeleton-block {
+      width: 100%;
+      height: 180px;
+      float: none;
+    }
+
+  }
+
+  &-wrap1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    & .skeleton-text {
+      width: 540px;
+      height: 40px;
+    }
+
+    & .skeleton-text:last-child {
+      width: 225px;
+      height: 40px;
+    }
+  }
+
+  &-wrap2, &-wrap3 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'block1 block2'
+                         'history history';
+    gap: 50px;
+  }
+
+  &-wrap3 {
+    grid-template-areas: 'block2 history'
+                         'block1 history';
+    & .skeleton-chart {
+      width: 588px;
+      height: 411px;
+
+      & .skeleton-block {
+        width: 100%;
+      }
+    }
+
+    & .skeleton-table {
+      width: 703px;
+      height: 728px;
+    }
+
+    & .skeleton-form {
+      width: 36.75rem;
+      height: 17.0625rem;
+    }
+  }
+}
+@keyframes skeleton-loading {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.skeleton-section {
+  display: none;
+  &.show {
+   display: block;
+  }
+}
+.skeleton-account {
+  height: 100%;
+}
+.skeleton-account-form {
+  height: 100%;
+}
+.skeleton-table-history {
+  height: 100%;
+  padding: 25px 50px;
+}

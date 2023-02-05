@@ -1,0 +1,94 @@
+.entry {
+  min-width: 1440px;
+  min-height: 1024px;
+  padding-top: 10px;
+  border-radius: 50px;
+
+  &_field {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 922px;
+    background-color: var(--white);
+
+    &-color:hover,
+    &-color:focus {
+      transition: background-color, 0.3s ease-in-out;
+      background-color: var(--primary-light) !important;
+    }
+  }
+
+  &_logo {
+    padding: 25px 50px;
+    background-color: var(--primary-main);
+  }
+
+  &_form {
+    position: absolute;
+    max-width: 500px;
+    max-height: 366px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 40px;
+    background-color: var(--grey);
+    border-radius: 50px;
+  }
+}
+
+/** errors field*/
+.error-field {
+  visibility: hidden;
+  position: absolute;
+  color: var(--input-red);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -24px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/image/error-i.svg");
+    background-size: 24px 24px;
+  }
+
+  &--layout {
+    bottom: 19%;
+    left: 58%;
+  }
+}
+.error-field-auth {
+  bottom: 5%;
+    left: 25%;
+}
+
+.server-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow:
+    0 1px 0px #378ab4,
+    1px 0 0px #5dabcd,
+    1px 2px 1px #378ab4,
+    2px 1px 1px #5dabcd,
+    2px 3px 2px #378ab4,
+    3px 2px 2px #5dabcd,
+    3px 4px 2px #378ab4,
+    4px 3px 3px #5dabcd,
+    4px 5px 3px #378ab4,
+    5px 4px 2px #5dabcd,
+    5px 6px 2px #378ab4,
+    6px 5px 2px #5dabcd,
+    6px 7px 1px #378ab4,
+    7px 6px 1px #5dabcd,
+    7px 8px 0px #378ab4,
+    8px 7px 0px #5dabcd;
+}
+
+@media only screen and (max-width: 575px) {
+  .entry_form {
+    padding: 30px 40px;
+  }
+}
