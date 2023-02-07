@@ -45,10 +45,10 @@ export default function sendAccountTransfer(id, router, createOneAccount) {
 
           createSuccessMSg("Money transfer completed").style.visibility =
             "visible";
-          // setTimeout(() => {
-          //   createSuccessMSg("Money transfer completed").style.visibility =
-          //     "hidden";
-          // }, 3000);
+          setTimeout(() => {
+            createSuccessMSg("Money transfer completed").style.visibility =
+              "hidden";
+          }, 3000);
         } else {
           switch (res.error) {
             case "Invalid account to":

@@ -8,7 +8,7 @@ import { createBanksPoints } from "../../controllers/createMap.js";
 export default function createBanksPage() {
   const container = mainField();
   const mapSection = el("section.container");
-  const title = createTitleSection("h2", "ATMs card", "title mb-5");
+  const title = createTitleSection("h2", "ATMs map", "title mb-5");
   const map = el("div.container.banks-map", { id: "map" });
 
   createBanksPoints();

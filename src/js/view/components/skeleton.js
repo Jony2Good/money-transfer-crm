@@ -24,6 +24,7 @@ export function showSkeleton(section) {
 }
 
 export function hideSkeleton(section) {
+  if (section == null) return;
   section.remove();
 }
 
