@@ -22,7 +22,6 @@ import { hideSkeleton } from "./js/view/components/skeleton";
 (() => {
   const router = new Navigo("/");
   const container = document.getElementById("section-app");
-  const token = sessionStorage.getItem("token");
 
   router
     .on("/", () => {
@@ -40,7 +39,7 @@ import { hideSkeleton } from "./js/view/components/skeleton";
 
     .on("accounts/:id", ({ data: { id } }) => {
       if (!sessionStorage.getItem("token")) router.navigate("/");
-      const data = getAccount(token, id);
+      const data = getAccount(sessionStorage.getItem("token"), id);
       data
         .then((res) => {
           setChildren(container, [
@@ -60,7 +59,7 @@ import { hideSkeleton } from "./js/view/components/skeleton";
     })
     .on("accounts/:id/history", ({ data: { id } }) => {
       if (!sessionStorage.getItem("token")) router.navigate("/");
-      const data = getAccount(token, id);
+      const data = getAccount(sessionStorage.getItem("token"), id);
       data
         .then((res) => {
           setChildren(container, [
